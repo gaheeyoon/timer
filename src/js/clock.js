@@ -30,7 +30,6 @@ const getRemainTimetoText = () => {
     let min = Math.floor((remainTime - (hour * 3600)) / 60);
     let sec = Math.floor(remainTime - (hour * 3600) - (min * 60));
 
-    console.log(remainTime);
     return `${modifyNumber(hour)}:${modifyNumber(min)}:${modifyNumber(sec)}`;
 };
 
