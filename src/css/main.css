@@ -1,0 +1,112 @@
+:root {
+    --xlarge: 170px;
+    --large: 28px;
+    --medium: 18px;
+    --small: 16px;
+    --xsmall: 14px;
+    --xxsmall: 10px;
+}
+
+body {
+    margin: 0 auto;
+    width: 100%;
+    font-family: 'Noto Sans KR', sans-serif;
+    background-image: url('https://images.unsplash.com/photo-1475738972911-5b44ce984c42?q=80&w=2970&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+
+#main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+}
+
+#main-container .main-wrapper {
+    text-align: center;
+}
+
+/* 시계 */
+.main-wrapper #time {
+    font-size: var(--xlarge);
+    font-weight: 400;
+    margin-top: -35px;
+}
+
+#setting-bar {
+    width: 240px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    min-height: calc(100vh - 20px);
+    padding: 10px 30px;
+    color: white;
+    display: none;
+}
+
+/* 설정 폼*/
+#setting-item-input-form {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: rgba(241, 241, 241, 0.2) 0.5px solid;
+    font-size: var(--small);
+    border-radius: 5px;
+    padding: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 30px;
+}
+
+#setting-item-input-form .label {
+    margin-bottom: 10px;
+    font-size: var(--medium);
+    width: 25px;
+    float: right;
+    padding-top: 3px;
+}
+
+#setting-item-input-form input {
+    width: 160px;
+    height: 20px;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+#setting-icon-area {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+
+#setting-icon-area i {
+    font-size: var(--large);
+    margin-right: 10px;
+}
+
+#setting-icon-area i:hover {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+#setting-icon-area #pause-btn, #setting-icon-area #close-btn {
+    display: none;
+}
+
+/* 카피라이트 */
+#copyright {
+    font-size: var(--small);
+    position: fixed;
+    bottom: 0;
+    max-width: 800px;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    font-weight: 300;
+    text-align: center;
+}

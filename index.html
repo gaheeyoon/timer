@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Study Timer</title>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      src="https://kit.fontawesome.com/b2185014d1.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&disp
+lay=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/css/main.css" />
+  </head>
+  <body>
+    <audio id="audio" autoplay loop>
+      <source src="src/res/campfire.mp3" />
+    </audio>
+
+    <div id="main-container">
+      <div class="main-wrapper">
+        <div class="today-info">
+          <div id="time">01:00:00</div>
+        </div>
+      </div>
+      <div id="copyright">@copyright 2024. gaheeyoon.</div>
+    </div>
+
+    <div id="setting-bar">
+      <div id="setting-item-input-form">
+        <input class="input" id="hour" value="1" />
+        <div class="label">시</div>
+        <input class="input" id="minute" />
+        <div class="label">분</div>
+        <input class="input" id="second" />
+        <div class="label">초</div>
+      </div>
+    </div>
+
+    <div id="setting-icon-area">
+      <i class="fa-solid fa-play" id="play-btn"></i>
+      <i class="fa-solid fa-pause" id="pause-btn"></i>
+      <i class="fa-solid fa-gear" id="setting-btn"></i>
+      <i class="fa-solid fa-close" id="close-btn"></i>
+    </div>
+
+    <script src="src/js/clock.js"></script>
+    <script src="src/js/setting-toggle.js"></script>
+  </body>
+</html>
