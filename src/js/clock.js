@@ -48,6 +48,10 @@ const updateRemainTimeText = (time) => {
 
 const updateRemainTime = () => {
     remainTime--;
+
+    if(remainTime == 0) {
+        end();
+    }
     updateRemainTimeText(getRemainTimetoText());
 };
 
@@ -65,9 +69,40 @@ const pause = () => {
     $pause.style.display = "none";
 }
 
+const end = () => {
+    $audio.pause();
+    clearInterval(interval);
+    updateRemainTimeText("00:00:00");
+}
+
+const validate = () => {
+    let hour = $hourInput.value;
+    let minute = $minuteInput.value;
+    let second = $secondInput.value;
+
+    if(hour < 0 || minute < 0 || second < 0) {
+        alert("0보다 큰 값을 입력해주세요.")
+        return false;
+    }
+    
+    if(hour > 24) {
+        alert("25보다 작은 값을 입력해주세요.")
+        return false;
+    }
+
+    if(minute > 59 || second > 59) {
+        alert("60보다 작은 값을 입력해주세요.")
+        return false;
+    }
+
+    return true;
+}
+
 const reset = () => {
-    pause();
-    setRemainTime();
+    if(validate()) {
+        pause();
+        setRemainTime();
+    }
 }
 
 $play.addEventListener("click", play);
